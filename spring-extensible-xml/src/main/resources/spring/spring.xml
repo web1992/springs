@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:demo="http://www.web1992.cn/schema/demo"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.web1992.cn/schema/demo  http://www.web1992.cn/schema/demo/demo.xsd">
+
+    <!-- as a top-level bean -->
+    <!--<demo:desc name="web1992" domain="www.web1992.cn" blog="http://www.web1992.cn/blog"/>-->
+
+    <bean id="demoBean" class="cn.web1992.DemoBean">
+        <property name="desc">
+            <demo:desc name="web1992" domain="www.web1992.cn" blog="http://www.web1992.cn/blog"/>
+        </property>
+    </bean>
+
+</beans>
