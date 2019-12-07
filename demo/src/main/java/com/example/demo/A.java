@@ -9,12 +9,22 @@ import org.springframework.stereotype.Component;
  */
 @Component("componentA")
 public class A {
+    private A() {
+    }
+
+    private A(B b) {
+        this.b = b;
+    }
 
     @Autowired
     private B b;
 
 
-    @Autowired
+    public String getDesc(){
+        return "Hello from A";
+    }
+
+
     public void init() {
         System.out.println("init B");
     }
