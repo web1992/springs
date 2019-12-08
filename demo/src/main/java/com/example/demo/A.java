@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 @Component("componentA")
 public class A {
     private A() {
+        System.out.println("construct A run");
     }
 
     private A(B b) {
@@ -26,6 +27,6 @@ public class A {
 
 
     public void init() {
-        System.out.println("init B");
+        System.out.println("init A");
     }
 }

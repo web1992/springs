@@ -10,9 +10,14 @@ import org.springframework.stereotype.Component;
  */
 @Component("componentB")
 public class B {
+    private B() {
+        System.out.println("construct B run");
+    }
+
     @Autowired
     private A a;
+
     public void init() {
-        System.out.println("init A");
+        System.out.println("init B");
     }
 }
