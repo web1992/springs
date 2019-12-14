@@ -13,13 +13,19 @@ import java.io.IOException;
 public class Main {
     private static final Logger logger = LoggerFactory.getLogger(ClassPathXmlApplicationContext.class);
 
+    static ClassPathXmlApplicationContext context = null;
+
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = null;
 
         try {
             context = new ClassPathXmlApplicationContext("classpath:spring-context.xml");
             context.start();
             logger.info(">>>>>>>>>>> Service started!");
+            {
+                testA();
+                testService();
+            }
+            // to prevent jvm exit
             System.in.read();
         } catch (IOException e) {
             logger.error(e.getLocalizedMessage(), e);
@@ -32,5 +38,15 @@ public class Main {
                 }
             }
         }
+    }
+
+    private static void testService() {
+        Service service = context.getBean(Service.class);
+        logger.info("Service bean is {}", service);
+    }
+
+    private static void testA() {
+        A a = context.getBean(A.class);
+        logger.info("A bean is {}", a);
     }
 }
