@@ -24,6 +24,7 @@ public class Main {
             {
                 testA();
                 testService();
+                testPerson();
             }
             // to prevent jvm exit
             System.in.read();
@@ -38,6 +39,13 @@ public class Main {
                 }
             }
         }
+    }
+
+
+    private static void testPerson() {
+        Person person = context.getBean(Person.class);
+        // person bean is Person{name='I am FactoryBeanTest', age=100}
+        logger.info("person bean is {}", person);
     }
 
     private static void testService() {
