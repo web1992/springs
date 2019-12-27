@@ -7,7 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.io.IOException;
 
 /**
- * @author wev1992
+ * @author web1992
  * @date 2019/12/7  22:26
  */
 public class Main {
@@ -44,7 +44,7 @@ public class Main {
 
     private static void testPerson() {
         Person person = context.getBean(Person.class);
-        // person bean is Person{name='I am FactoryBeanTest', age=100}
+        // person bean is Person{name='I am create by FactoryBeanTest', age=100}
         logger.info("person bean is {}", person);
     }
 
@@ -54,7 +54,7 @@ public class Main {
     }
 
     private static void testA() {
-        A a = context.getBean(A.class);
-        logger.info("A bean is {}", a);
+        ComponentA componentA = context.getBean(ComponentA.class);
+        logger.info("A bean is {}", componentA);
     }
 }

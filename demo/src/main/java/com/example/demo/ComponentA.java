@@ -8,17 +8,17 @@ import org.springframework.stereotype.Component;
  * @date 2019/11/28  23:25
  */
 @Component("componentA")
-public class A {
-    private A() {
+public class ComponentA {
+    private ComponentA() {
         System.out.println("construct A run");
     }
 
-    private A(B b) {
-        this.b = b;
+    private ComponentA(ComponentB componentB) {
+        this.componentB = componentB;
     }
 
     @Autowired
-    private B b;
+    private ComponentB componentB;
 
 
     public String getDesc(){

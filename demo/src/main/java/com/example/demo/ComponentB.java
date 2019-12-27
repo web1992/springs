@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
  * @date 2019/11/28  23:25
  */
 @Component("componentB")
-public class B {
-    private B() {
+public class ComponentB {
+    private ComponentB() {
         System.out.println("construct B run");
     }
 
     @Autowired
-    private A a;
+    private ComponentA componentA;
 
     public void init() {
         System.out.println("init B");

@@ -5,18 +5,18 @@ import org.springframework.beans.factory.FactoryBean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author wangerbao
+ * @author web1992
  * @date 2019/12/23  18:39
  */
 @Configuration
-public class FactoryBeanTest implements FactoryBean<Person> {
+public class PersonFactoryBeanTest implements FactoryBean<Person> {
 
     @Override
     public Person getObject() throws Exception {
         Person person = new Person();
 
         person.setAge(100);
-        person.setName("I am FactoryBeanTest");
+        person.setName("I am create by FactoryBeanTest");
         return person;
     }
 
@@ -27,6 +27,6 @@ public class FactoryBeanTest implements FactoryBean<Person> {
 
     @Override
     public boolean isSingleton() {
-        return false;
+        return true;
     }
 }
