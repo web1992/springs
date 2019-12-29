@@ -20,6 +20,7 @@
         <module>web</module>
         <module>spring-extensible-xml</module>
         <module>demo</module>
+        <module>spring-war</module>
     </modules>
 
 </project>
