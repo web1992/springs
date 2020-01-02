@@ -1,7 +1,5 @@
 package cn.web1992.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 /**
  * author: web1992
  * date: 2017/11/15
@@ -10,7 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class UserServiceImpl implements UserService {
 
-    private  LoginService loginService;
+
+    public UserServiceImpl() {
+        System.out.println("UserServiceImpl init");
+    }
+
+    private LoginService loginService;
 
     public void setLoginService(LoginService loginService) {
         this.loginService = loginService;
@@ -18,12 +21,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void sayName() {
-        System.out.println("name");
-        System.out.println("UserServiceImpl:sayName loginService="+loginService);
+        System.out.println("sayName");
+        System.out.println("UserServiceImpl:sayName loginService=" + loginService);
     }
-    public  void init(){
+
+    public void init() {
         System.out.println("UserServiceImpl:init");
-        System.out.println("UserServiceImpl:init loginService="+loginService);
+        System.out.println("UserServiceImpl:init loginService=" + loginService);
     }
 }
 

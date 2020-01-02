@@ -25,7 +25,7 @@ public class IndexController {
     private static Logger LOG = LoggerFactory.getLogger(IndexController.class);
 
 
-    @Autowired
+    @Autowired(required = false)
     private UserService service;
 
     /**
@@ -38,7 +38,7 @@ public class IndexController {
     public String index(HttpServletRequest request, HttpServletResponse response) throws IOException, InterruptedException {
         Map<String, String> paramMap = getParamMap(request.getParameterMap());
         service.sayName();
-        LOG.info("paramMap={}" + paramMap);
+        LOG.info("paramMap={}", paramMap);
         return "200";
     }
 
