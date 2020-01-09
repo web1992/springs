@@ -36,17 +36,17 @@ public class ControllerBeanPostProcessor extends TempClass implements BeanPostPr
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         // 这里会打印两次 WebApplicationContext
-        // 因为在 ContextLoaderListener 和 DispatcherServlet 中都被加载了
+        // 因为在 ContextLoaderListener 和 DispatcherServlet 中都被加载了两次
         // Root WebApplicationContext
         // setApplicationContext applicationContext= WebApplicationContext for namespace 'dispatcherServlet-servlet'
         System.out.println("setApplicationContext applicationContext= " + applicationContext);
     }
 }
 
-class TempClass implements ApplicationContextAware {
+abstract class  TempClass implements ApplicationContextAware {
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-
+        // nop
     }
 }
