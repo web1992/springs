@@ -33,14 +33,14 @@ public class HomeController {
      * @return
      * @throws Exception
      */
-    @RequestMapping(value = {"/home"}, consumes = {"application/json"}, produces = {"application/json"})
+    @RequestMapping(value = {"/home"}, consumes = {"application/json"})
     @ResponseBody
     public String homeJson(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         return "home json";
     }
 
-    @RequestMapping(value = {"/home"}, consumes = {"application/xml"}, produces = {"application/xml"})
+    @RequestMapping(value = {"/home"}, consumes = {"application/xml"})
     @ResponseBody
     public String homeXml(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
