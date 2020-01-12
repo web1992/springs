@@ -1,5 +1,6 @@
-package cn.web1992.controller;
+package cn.web1992.spring;
 
+import cn.web1992.controller.IndexController;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;

@@ -28,6 +28,13 @@ public class HomeController {
 
     private static Logger LOG = LoggerFactory.getLogger(HomeController.class);
 
+    /**
+     * <pre>
+     *     命令: curl -H "Content-Type: application/json"  127.0.0.1:8080/hom
+     *
+     *     输出: home json
+     * </pre>
+     */
     @RequestMapping(value = {"/home"}, consumes = {"application/json"}, method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public String homeJson(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -35,6 +42,13 @@ public class HomeController {
         return "home json";
     }
 
+    /**
+     * <pre>
+     *     命令: curl -H "Content-Type: application/xml"  127.0.0.1:8080/home
+     *
+     *     输出: home xml
+     * </pre>
+     */
     @RequestMapping(value = {"/home"}, consumes = {"application/xml"})
     @ResponseBody
     public String homeXml(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -64,6 +78,8 @@ public class HomeController {
 
     /**
      * curl -i "127.0.0.1:8080/param?a=1"
+     * <p>
+     * 输出：vv is a
      */
     @RequestMapping(value = {"/param"}, params = {"a=1"})
     @ResponseBody
@@ -72,10 +88,16 @@ public class HomeController {
         return "param";
     }
 
+    /**
+     * curl -i    "127.0.0.1:8080/a/v"
+     */
     @RequestMapping(value = {"/{vv}/v"})
     @ResponseBody
     public String vv(HttpServletRequest request, HttpServletResponse response, @PathVariable(value = "vv") String vv) throws Exception {
 
         return "vv is " + vv;
     }
+
+
 }
+
