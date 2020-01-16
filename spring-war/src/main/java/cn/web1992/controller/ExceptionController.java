@@ -1,6 +1,7 @@
 package cn.web1992.controller;
 
 import cn.web1992.exception.RestException;
+import cn.web1992.exception.UnauthorizedException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -28,8 +29,19 @@ public class ExceptionController {
     public String throwable() throws Throwable {
 
         if (1 == 1) {
-            throw new Throwable("eeeeeeeee....");
+            throw new Throwable("throwable....");
         }
         return "throwable";
     }
+
+    @RequestMapping(value = {"/unauthorized"})
+    @ResponseBody
+    public String unauthorized() throws UnauthorizedException {
+
+        if (1 == 1) {
+            throw new UnauthorizedException("unauthorized....");
+        }
+        return "unauthorized";
+    }
+
 }
