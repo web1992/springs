@@ -13,16 +13,12 @@ public class ExceptionHandlerAdviceForRest {
 
     @ExceptionHandler(RestException.class)
     public String customGenericExceptionHandler(RestException exception) {
-        return "RestException";
+        return "RestException " + exception.getMessage();
     }
 
     @ExceptionHandler(Throwable.class)
     public String throwable(Throwable exception) {
-        return "Throwable";
+        return "Throwable " + exception.getMessage();
     }
 
-    @ExceptionHandler(RuntimeException.class)
-    public String throwable(RuntimeException exception) {
-        return "RuntimeException";
-    }
 }

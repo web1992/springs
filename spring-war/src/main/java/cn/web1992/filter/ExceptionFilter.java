@@ -1,7 +1,5 @@
 package cn.web1992.filter;
 
-import cn.web1992.exception.RestException;
-
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
