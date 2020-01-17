@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.factorybeantest.PersonFactoryBeanTest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -22,14 +23,17 @@ public class Main {
             context.start();
             logger.info(">>>>>>>>>>> Service started!");
             {
-                testA();
-                testService();
-                testPerson();
+//                testA();
+//                testService();
+//                testPerson();
+                testPersonFactoryBeanTest();
             }
             // to prevent jvm exit
             System.in.read();
         } catch (IOException e) {
             logger.error(e.getLocalizedMessage(), e);
+        } catch (Exception e) {
+            e.printStackTrace();
         } finally {
             if (null != context && context.isActive()) {
                 try {
@@ -41,6 +45,11 @@ public class Main {
         }
     }
 
+    private static void testPersonFactoryBeanTest() throws Exception {
+        PersonFactoryBeanTest bean = context.getBean(PersonFactoryBeanTest.class);
+        logger.info("testPersonFactoryBeanTest bean is {}", bean);
+        logger.info("testPersonFactoryBeanTest getObject is {}", bean.getObject());
+    }
 
     private static void testPerson() {
         Person person = context.getBean(Person.class);

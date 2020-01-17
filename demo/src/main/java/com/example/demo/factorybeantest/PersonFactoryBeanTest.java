@@ -29,4 +29,14 @@ public class PersonFactoryBeanTest implements FactoryBean<Person> {
     public boolean isSingleton() {
         return true;
     }
+
+    @Override
+    public String toString() {
+        try {
+            return "PersonFactoryBeanTest getObject is " + this.getObject() + " isSingleton =" + isSingleton() + " getObjectType =" + getObjectType();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "PersonFactoryBeanTest";
+    }
 }
