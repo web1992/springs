@@ -15,7 +15,8 @@ public class ComponentA {
 
     /**
      * Error creating bean with name 'componentA': Requested bean is currently in creation: Is there an unresolvable circular reference?
-     * 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:732)
+     * at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:732)
+     *
      * @param componentB
      */
     // @Autowired
@@ -28,7 +29,7 @@ public class ComponentA {
     private ComponentB componentB;
 
 
-    public String getDesc(){
+    public String getDesc() {
         return "Hello from A";
     }
 

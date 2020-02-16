@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- *
  * @link {https://github.com/web1992/read/blob/master/spring/spring-mvc/spring-web-request-condition.md#requestconditioncombine}
  */
 @Controller("combineController")

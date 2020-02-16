@@ -19,6 +19,6 @@ public class BeanFactoryTest implements BeanFactoryPostProcessor {
         BeanDefinition componentB = beanFactory.getBeanDefinition("componentB");
 
         Object source = componentB.getSource();
-        System.out.println("componentB "+componentB);
+        System.out.println("componentB " + componentB);
     }
 }

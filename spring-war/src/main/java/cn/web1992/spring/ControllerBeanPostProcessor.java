@@ -44,7 +44,7 @@ public class ControllerBeanPostProcessor extends TempClass implements BeanPostPr
     }
 }
 
-abstract class  TempClass implements ApplicationContextAware {
+abstract class TempClass implements ApplicationContextAware {
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {

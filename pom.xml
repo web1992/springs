@@ -19,7 +19,8 @@
     <modules>
         <module>web</module>
         <module>spring-extensible-xml</module>
-        <module>demo</module>
+        <module>spring-demo</module>
+        <module>spring-boot</module>
         <module>spring-war</module>
     </modules>
 

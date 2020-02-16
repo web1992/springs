@@ -14,7 +14,7 @@ public class ComponentB {
         System.out.println("construct B run");
     }
 
-//    @Autowired
+    //    @Autowired
     public ComponentB(ComponentA componentA) {
         this.componentA = componentA;
     }

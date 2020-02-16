@@ -11,7 +11,8 @@ public class LoginServiceImpl implements LoginService {
     public void login() {
         System.out.println("login");
     }
-    public  void init(){
+
+    public void init() {
         System.out.println("UserServiceImpl:init");
     }
 }
