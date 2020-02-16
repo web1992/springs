@@ -1,16 +1,3 @@
-# spring extensible xml
+# spring-demo
 
-spring xml 扩展点demo 
-
-## run
-
-```sh
-    cd spring-extensible-xml
-    mvn exec:java -Dexec.mainClass=cn.web1992.spring.demo.App
-```
-
-> result:
-
-```log
-result: Desc{name='web1992', domain='www.web1992.cn', blog='http://www.web1992.cn/blog'}
-```
+spring 简单的demo，学习源码使用
