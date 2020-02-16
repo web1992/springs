@@ -1,16 +1,16 @@
-package cn.web1992.spring.demo;
+package cn.web1992.spring.demo.xml;
 
 /**
  * @author web1992
  * @date 2020/2/16  20:02
  */
-public class Demo {
+public class XmlDemo {
     private String name;
 
-    public Demo() {
+    public XmlDemo() {
     }
 
-    public Demo(String name) {
+    public XmlDemo(String name) {
         this.name = name;
     }
 

@@ -4,7 +4,7 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="demoBean" class="cn.web1992.spring.demo.Demo">
+    <bean id="demoBean" class="cn.web1992.spring.demo.xml.XmlDemo">
         <property name="name" value="xxx"/>
     </bean>
 
