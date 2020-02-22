@@ -13,9 +13,11 @@ public class AnnotationDemo {
 
     public AnnotationDemo(String name) {
         this.name = name;
+        System.out.println("AnnotationDemo init with name arg");
     }
 
     public AnnotationDemo() {
+        System.out.println("AnnotationDemo init no args");
     }
 
     public String getName() {
