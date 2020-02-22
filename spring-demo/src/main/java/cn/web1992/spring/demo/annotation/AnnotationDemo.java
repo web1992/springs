@@ -17,7 +17,7 @@ public class AnnotationDemo {
     }
 
     public AnnotationDemo() {
-        System.out.println("AnnotationDemo init no args");
+        System.out.println("AnnotationDemo init with no args");
     }
 
     public String getName() {
