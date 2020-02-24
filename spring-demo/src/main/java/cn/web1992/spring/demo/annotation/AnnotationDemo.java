@@ -1,5 +1,6 @@
 package cn.web1992.spring.demo.annotation;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,7 +10,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class AnnotationDemo {
 
-    private String name = "AnnotationDemo";
+    private String name = "annotationDemo";
+
+    @Autowired
+    private CarService carService;
 
     public AnnotationDemo(String name) {
         this.name = name;
@@ -26,5 +30,13 @@ public class AnnotationDemo {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "AnnotationDemo{" +
+                "name='" + name + '\'' +
+                ", carService=" + carService +
+                '}';
     }
 }

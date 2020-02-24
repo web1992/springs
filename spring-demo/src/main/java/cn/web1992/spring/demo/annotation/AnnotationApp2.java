@@ -25,16 +25,19 @@ public class AnnotationApp2 {
 
         BeanDefinition peopleFactory = context.getBeanDefinition("peopleFactory");
         BeanDefinition createStudent = context.getBeanDefinition("createStudent");
+        BeanDefinition annotationDemo = context.getBeanDefinition("annotationDemo");
 
         System.out.println("peopleFactory is " + peopleFactory);
         System.out.println("createStudent is " + createStudent);
+        System.out.println("annotationDemo is " + annotationDemo);
+        System.out.println("annotationDemo is " + context.getBean("annotationDemo"));
 
-        Person person = context.getBean(Person.class);
-        Car car = context.getBean(Car.class);
-        System.out.println("person is " + person);
-        System.out.println("car is " + car);
-        Object createPerson = context.getBean("createPerson");
-        System.out.println(createPerson);
+//        Person person = context.getBean(Person.class);
+//        Car car = context.getBean(Car.class);
+//        System.out.println("person is " + person);
+//        System.out.println("car is " + car);
+//        Object createPerson = context.getBean("createPerson");
+//        System.out.println(createPerson);
     }
 
 
