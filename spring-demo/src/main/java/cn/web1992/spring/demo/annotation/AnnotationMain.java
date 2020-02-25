@@ -8,14 +8,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @date 2020/2/22  20:54
  * @desc PersonFactory 测试
  */
-public class AnnotationApp2 {
+public class AnnotationMain {
 
     private static AnnotationConfigApplicationContext context;
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context;
         context = new AnnotationConfigApplicationContext();
-        context.scan("cn.web1992.spring.demo");
+        context.scan("cn.web1992.spring.demo.annotation");
         context.refresh();
 
         String[] beanDefinitionNames = context.getBeanDefinitionNames();
@@ -25,12 +25,9 @@ public class AnnotationApp2 {
 
         BeanDefinition peopleFactory = context.getBeanDefinition("peopleFactory");
         BeanDefinition createStudent = context.getBeanDefinition("createStudent");
-        BeanDefinition annotationDemo = context.getBeanDefinition("annotationDemo");
 
         System.out.println("peopleFactory is " + peopleFactory);
         System.out.println("createStudent is " + createStudent);
-        System.out.println("annotationDemo is " + annotationDemo);
-        System.out.println("annotationDemo is " + context.getBean("annotationDemo"));
 
 //        Person person = context.getBean(Person.class);
 //        Car car = context.getBean(Car.class);

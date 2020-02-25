@@ -1,4 +1,4 @@
-package cn.web1992.spring.demo.config;
+package cn.web1992.spring.demo.initializingbean;
 
 import org.springframework.beans.factory.InitializingBean;
 

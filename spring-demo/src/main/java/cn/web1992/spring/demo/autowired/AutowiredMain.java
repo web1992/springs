@@ -1,42 +1,23 @@
 package cn.web1992.spring.demo.autowired;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * @author web1992
- * @date 2020/2/16  20:47
+ * @date 2020/2/25  22:25
  */
-@Component
 public class AutowiredMain {
 
-    private String name = "annotationDemo";
+    public static void main(String[] args) {
+        AnnotationConfigApplicationContext context;
+        context = new AnnotationConfigApplicationContext();
+        context.scan("cn.web1992.spring.demo.autowired");
+        context.refresh();
 
-    @Autowired
-    private CarService carService;
+        CarService carService = context.getBean(CarService.class);
+        CarFactory carFactory = context.getBean(CarFactory.class);
 
-    public AutowiredMain(String name) {
-        this.name = name;
-        System.out.println("AnnotationDemo init with name arg");
-    }
-
-    public AutowiredMain() {
-        System.out.println("AnnotationDemo init with no args");
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "AnnotationDemo{" +
-                "name='" + name + '\'' +
-                ", carService=" + carService +
-                '}';
+        System.out.println(carService);
+        System.out.println(carFactory);
     }
 }
