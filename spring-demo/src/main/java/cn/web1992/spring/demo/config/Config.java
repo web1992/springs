@@ -1,4 +1,4 @@
-package cn.web1992.spring.demo.annotation;
+package cn.web1992.spring.demo.config;
 
 import org.springframework.beans.factory.InitializingBean;
 

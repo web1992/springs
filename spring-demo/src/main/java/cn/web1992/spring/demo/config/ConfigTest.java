@@ -1,21 +1,22 @@
-package cn.web1992.spring.demo.annotation;
+package cn.web1992.spring.demo.config;
 
+import cn.web1992.spring.demo.autowired.AutowiredMain;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
  * @author web1992
  * @date 2020/2/16  20:54
  */
-public class AnnotationApp {
+public class ConfigTest {
 
     private static AnnotationConfigApplicationContext context;
 
     public static void main(String[] args) {
 
         context = new AnnotationConfigApplicationContext();
-        context.scan("cn.web1992.spring.demo");
+        context.scan("cn.web1992.spring.demo.config");
         context.refresh();
-        AnnotationDemo annotationDemo = context.getBean(AnnotationDemo.class);
+        AutowiredMain annotationDemo = context.getBean(AutowiredMain.class);
         System.out.println("name is " + annotationDemo.getName());
 
         System.out.println("=========================================");

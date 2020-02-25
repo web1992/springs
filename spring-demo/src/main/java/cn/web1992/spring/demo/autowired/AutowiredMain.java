@@ -1,4 +1,4 @@
-package cn.web1992.spring.demo.annotation;
+package cn.web1992.spring.demo.autowired;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -8,19 +8,19 @@ import org.springframework.stereotype.Component;
  * @date 2020/2/16  20:47
  */
 @Component
-public class AnnotationDemo {
+public class AutowiredMain {
 
     private String name = "annotationDemo";
 
     @Autowired
     private CarService carService;
 
-    public AnnotationDemo(String name) {
+    public AutowiredMain(String name) {
         this.name = name;
         System.out.println("AnnotationDemo init with name arg");
     }
 
-    public AnnotationDemo() {
+    public AutowiredMain() {
         System.out.println("AnnotationDemo init with no args");
     }
 

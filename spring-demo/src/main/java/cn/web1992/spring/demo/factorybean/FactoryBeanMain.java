@@ -1,4 +1,4 @@
-package cn.web1992.spring.demo.annotation;
+package cn.web1992.spring.demo.factorybean;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @date 2020/2/22  20:54
  * @desc  FactoryBeanTest 测试
  */
-public class AnnotationApp3 {
+public class FactoryBeanMain {
 
     private static AnnotationConfigApplicationContext context;
 

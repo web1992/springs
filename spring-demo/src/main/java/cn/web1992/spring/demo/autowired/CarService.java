@@ -1,4 +1,4 @@
-package cn.web1992.spring.demo.annotation;
+package cn.web1992.spring.demo.autowired;
 
 import org.springframework.stereotype.Component;
 

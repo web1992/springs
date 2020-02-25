@@ -1,4 +1,4 @@
-package cn.web1992.spring.demo.annotation;
+package cn.web1992.spring.demo.factorybean;
 
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.context.annotation.Configuration;

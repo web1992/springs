@@ -7,6 +7,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @author web1992
  * @date 2020/2/24  20:54
  * @desc @Configuration 测试
+ * @see org.springframework.context.annotation.ConfigurationClassPostProcessor
+ * @see org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader#loadBeanDefinitionsForBeanMethod
  */
 public class ConfigurationTest {
 
