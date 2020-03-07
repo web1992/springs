@@ -1,6 +1,6 @@
 package cn.web1992.web.calhandler.api.annoation;
 
-import cn.web1992.web.calhandler.api.HandlersId;
+import cn.web1992.web.calhandler.api.enums.HandlersId;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

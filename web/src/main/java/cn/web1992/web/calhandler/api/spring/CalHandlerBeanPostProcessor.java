@@ -28,7 +28,7 @@ public class CalHandlerBeanPostProcessor implements BeanPostProcessor {
         if (bean instanceof CalHandler) {
             Handler annotation = bean.getClass().getAnnotation(Handler.class);
             if (null != annotation) {
-                CalHandlerFactory.addCalHandler((CalHandler) bean, annotation.value(),annotation.id());
+                CalHandlerFactory.addCalHandler((CalHandler) bean, annotation.value(), annotation.id());
             }
         }
         return bean;

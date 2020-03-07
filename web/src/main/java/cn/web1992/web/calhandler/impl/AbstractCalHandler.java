@@ -9,5 +9,4 @@ import cn.web1992.web.calhandler.api.CalHandler;
 public abstract class AbstractCalHandler implements CalHandler {
 
 
-
 }

@@ -3,8 +3,8 @@ package cn.web1992.web.calhandler.impl;
 import cn.web1992.web.calhandler.api.CalContext;
 import cn.web1992.web.calhandler.api.CalHandler;
 import cn.web1992.web.calhandler.api.CalHandlerChain;
-import cn.web1992.web.calhandler.api.HandlersId;
 import cn.web1992.web.calhandler.api.annoation.Handler;
+import cn.web1992.web.calhandler.api.enums.HandlersId;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * @date 2020/3/7  22:25
  */
 @Service
-@Handler(value = 6, id = HandlersId.E)
+@Handler(value = 60, id = HandlersId.E)
 public class ECalHandler extends AbstractCalHandler implements CalHandler {
 
     @Override

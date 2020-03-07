@@ -26,6 +26,13 @@ public class WebApplication {
 //        testMapper();
 
 
+        testCalHandler();
+
+
+    }
+
+
+    private static void testCalHandler() {
         CalContext calContext = new CalContext();
         calContext.setParam("ABCD");
         CalHandlerFactory.startCal(calContext);
