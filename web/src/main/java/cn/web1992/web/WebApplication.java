@@ -1,11 +1,15 @@
 package cn.web1992.web;
 
+import cn.web1992.web.calhandler.api.CalContext;
+import cn.web1992.web.calhandler.api.CalHandlerFactory;
 import cn.web1992.web.mapper.UserMapper;
 import cn.web1992.web.service.lunch.Lunch;
 import cn.web1992.web.service.lunch.LunchServiceFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+
+import java.util.Arrays;
 
 /**
  * @author web1992
@@ -17,10 +21,32 @@ public class WebApplication {
 
     public static void main(String[] args) {
         context = SpringApplication.run(WebApplication.class, args);
-
+//        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
 //        testLunch();
-        testMapper();
+//        testMapper();
 
+
+        CalContext calContext = new CalContext();
+        calContext.setParam("ABCD");
+        CalHandlerFactory.startCal(calContext);
+        System.out.println("cal result " + calContext.getCalResult());
+        calContext.setCalResult(null);
+
+        System.out.println("================");
+        calContext.setParam("ECABD");
+        CalHandlerFactory.startCal(calContext);
+        System.out.println("cal result " + calContext.getCalResult());
+        calContext.setCalResult(null);
+
+        System.out.println("================");
+        calContext.setParam("BCDE");
+        CalHandlerFactory.startCal(calContext);
+        System.out.println("cal result " + calContext.getCalResult());
+        calContext.setCalResult(null);
+        System.out.println("================");
+        calContext.setParam("ABCDE");
+        CalHandlerFactory.startCal(calContext, Arrays.asList("A", "B"));
+        System.out.println("cal result " + calContext.getCalResult());
     }
 
 
